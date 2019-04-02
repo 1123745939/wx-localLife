@@ -1,0 +1,20 @@
+<!-- 轮播图 -->
+
+<swiper indicator-dots autoplay interval="2000" circular>
+  <swiper-item wx:for="{{imgList}}" wx:key="id">
+    <image mode='widthFix' src='/assets/images/banner-01.png'></image>
+  </swiper-item>
+</swiper>
+
+<!-- 九宫格 -->
+<view class='categories'>
+  <navigator url="/pages/list/list?list={{item.id}}" class='item' wx:for="{{categoryList}}" wx:key="id">
+    <image src='{{item.icon}}'></image>
+    <text>{{item.name}}</text>
+  </navigator>
+</view>
+<!-- 底部推荐 -->
+<view class='links'>
+<image mode='widthFix' src='/assets/images/link-01.png'></image>
+<image mode='widthFix' src='/assets/images/link-02.png'></image>
+</view>
